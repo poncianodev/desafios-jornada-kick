@@ -1,0 +1,310 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-principal: #bf1313;
+  --cor-preta: #171617;
+  --cor-branca: #fffafa;
+  --cor-cinza: #d9d9d9;
+  --cinza-escuro: #919191;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--cor-branca);
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-logo {
+  width: 120px;
+}
+
+.nav-first-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-first-menu a {
+  text-decoration: none;
+  color: var(--cor-preta);
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.nav-first-menu a:hover {
+  color: var(--cor-principal);
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+}
+
+.nav-search ion-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-button {
+  color: var(--cor-branca);
+  background-color: var(--cor-principal);
+  padding: 0.5rem;
+  width: 5rem;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: transparent;
+  border: 1px solid var(--cor-principal);
+  color: var(--cor-principal);
+  transform: scale(1.02);
+}
+
+.secondary-nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--cor-cinza);
+}
+
+.nav-secondary-menu {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  color: var(--cor-preta);
+  font-weight: 600;
+}
+
+.drop-link {
+  position: relative;
+  display: inline-block;
+}
+
+.drop-content {
+  display: none;
+  position: absolute;
+  background-color: var(--cor-branca);
+  left: -20px;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  z-index: 1;
+}
+
+.drop-content a {
+  color: var(--cor-preta);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: 0.2s ease;
+}
+
+.drop-content a:hover {
+  background-color: var(--cor-principal);
+  color: var(--cor-branca);
+}
+
+.drop-link:hover .drop-content {
+  display: block;
+}
+
+.nav-secondary-menu > :nth-child(1)::after,
+.nav-secondary-menu > :nth-child(2)::after,
+.nav-secondary-menu > :nth-child(3)::after {
+  content: "|";
+  position: absolute;
+  left: 130px;
+  top: 0;
+  color: var(--cinza-escuro);
+}
+
+/* MAIN */
+
+.news {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+  gap: 1rem;
+}
+
+.news-cards1 {
+  background-image: url(../assets/img/gta-5.jpg);
+  background-size: cover;
+  position: relative;
+  width: 275px;
+  height: 400px;
+  border-radius: 5px;
+  background-color: #919191;
+  transition: 0.8s ease-in-out;
+}
+
+.news-cards1:hover {
+  transform: scale(1.03);
+}
+
+.news-cards1 h3 {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  font-weight: 700;
+  color: var(--cor-branca);
+  text-shadow: 1px 2px 1px #171617;
+}
+
+.news-cards1::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(226, 127, 81, 0.95);
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+}
+
+.news-cards2 {
+  background-image: url(../assets/img/greys.webp);
+  background-size: cover;
+  position: relative;
+  width: 275px;
+  height: 400px;
+  border-radius: 5px;
+  background-color: #919191;
+  transition: 0.8s ease-in-out;
+}
+
+.news-cards2:hover {
+  transform: scale(1.03);
+}
+
+.news-cards2 h3 {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  font-weight: 700;
+  color: var(--cor-branca);
+  text-shadow: 1px 2px 1px #171617;
+}
+
+.news-cards2::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(146, 184, 233, 0.95);
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+}
+
+.news-cards3 {
+  background-image: url(../assets/img/the-sims-4.jpg);
+  background-size: cover;
+  position: relative;
+  width: 275px;
+  height: 400px;
+  border-radius: 5px;
+  background-color: #919191;
+  background-position: center top;
+  transition: 0.8s ease-in-out;
+}
+
+.news-cards3:hover {
+  transform: scale(1.03);
+}
+
+.news-cards3 h3 {
+  position: absolute;
+  bottom: 5%;
+  text-align: center;
+  font-weight: 700;
+  color: var(--cor-branca);
+  text-shadow: 1px 2px 1px #171617;
+}
+
+.news-cards3::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(169, 201, 60, 0.95);
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+}
+
+.news-cards4 {
+  background-image: url(../assets/img/fc24.webp);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 275px;
+  height: 400px;
+  border-radius: 5px;
+  background-color: #919191;
+  transition: 0.8s ease-in-out;
+}
+
+.news-cards4:hover {
+  transform: scale(1.03);
+}
+
+.news-cards4 h3 {
+  position: absolute;
+  bottom: 10%;
+  text-align: center;
+  font-weight: 700;
+  color: var(--cor-branca);
+  text-shadow: 1px 2px 1px #171617;
+}
+
+.news-cards4::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(95, 104, 144, 0.95);
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background-color: var(--cor-principal);
+  color: var(--cor-branca);
+  font-weight: 300;
+}
+
+footer p a {
+  text-decoration: none;
+  color: yellow;
+}
